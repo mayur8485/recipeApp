@@ -18,6 +18,8 @@
                     <button class="btn btn-danger" type="button" (click)="onDelete()" *ngIf="editMode" [disabled]="!f.valid">Delete</button>
                     <span *ngIf="editMode">&nbsp;</span>
                     <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
+                    <span>&nbsp;</span>
+                    <button class="btn btn-primary" type="button" (click)="onClearAll()">ClearAll</button>
                 </div>
             </div>
         </form>

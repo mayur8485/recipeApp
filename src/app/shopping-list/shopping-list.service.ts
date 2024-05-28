@@ -71,7 +71,11 @@ export class ShoppingListService {
         if(!itemFound){
             alert('Ingredient not found');
         }
+    }
 
+    onEmptyList() {
+        this.ingredients = [];
+        this.ingredientsChanged.next([]);
     }
 
 }
