@@ -69,6 +69,7 @@ export class ShoppingEditComponent implements OnInit {
 
   onClearAll() {
     this.shoppingListService.onEmptyList();
+    this.slForm.reset();
   }
 
 }
