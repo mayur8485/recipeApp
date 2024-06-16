@@ -10,16 +10,16 @@ const appRoutes: Routes = [
   },
   {
     path: 'shoppingList',
-    loadChildren: () => import('./shopping-list/shopping.module').then((m)=> m.ShoppingListModule)
+    loadChildren: () => import('./shopping-list/shopping.module').then((m) => m.ShoppingListModule)
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then((m)=> m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule)
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})],
+  imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules, useHash: true })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
